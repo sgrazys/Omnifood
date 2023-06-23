@@ -54,14 +54,14 @@ body {
 	line-height: 1;
 }
 
-.test {
-	background-color: red;
-	/* width: 1000px; */
-	/* max-width: 1000px; */
+.hero {
+	max-width: 130rem;
+	margin: 0 auto;
 
-	max-width: 50rem;
-	color: white;
-	font-size: 2rem;
-	padding: 4rem;
-	/* 1 rems = 16px -> 50rem = 800px  */
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.hero-img {
+	width: 100%;
 }
