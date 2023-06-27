@@ -54,7 +54,7 @@
 }
 
 /* *************************** */
-/* HERO SECTION*/
+/* HERO SECTION */
 /* *************************** */
 .section-hero {
 	background-color: #fdf2e9;
@@ -115,7 +115,7 @@
 }
 
 /* *************************** */
-/* FEATURED IN SECTION*/
+/* FEATURED IN SECTION */
 /* *************************** */
 .section-featured {
 	padding: 4.8rem 0 3.2rem 0;
@@ -142,7 +142,7 @@
 }
 
 /* *************************** */
-/* HOW IT WORKS SECTION*/
+/* HOW IT WORKS SECTION */
 /* *************************** */
 
 .section-how {
@@ -202,10 +202,10 @@
 }
 
 /* *************************** */
-/* MEALS ADN DIETS SECTION*/
+/* MEALS ADN DIETS SECTION */
 /* *************************** */
 .section-meals {
-	padding: 4.8rem 0 3.2rem 0;
+	padding: 9.6rem 0;
 }
 
 .meal {
@@ -220,38 +220,32 @@
 	box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
 }
 
-.meal-img {
-	width: 100%;
-}
-
 .meal-content {
 	padding: 3.2rem 4.8rem 4.8rem 4.8rem;
 }
 
 .meal-tags {
+	margin-bottom: 1.2rem;
 	display: flex;
 	gap: 0.4rem;
-	margin-bottom: 12px;
 }
 
 .tag {
 	display: inline-block;
 	padding: 0.4rem 0.8rem;
 	font-size: 1.2rem;
-	font-weight: 600;
 	text-transform: uppercase;
 	color: #333;
 	border-radius: 100px;
+	font-weight: 600;
 }
 
 .tag--vegetarian {
 	background-color: #51cf66;
 }
-
-.tag--vegen {
+.tag--vegan {
 	background-color: #94d82d;
 }
-
 .tag--paleo {
 	background-color: #ffd43b;
 }
@@ -271,10 +265,10 @@
 }
 
 .meal-attribute {
+	font-size: 1.8rem;
 	display: flex;
 	align-items: center;
 	gap: 1.6rem;
-	font-size: 1.8rem;
 }
 
 .meal-icon {
@@ -283,26 +277,42 @@
 	color: #e67e22;
 }
 
+.meal-img {
+	width: 100%;
+}
+
 .all-recipes {
 	text-align: center;
 	font-size: 1.8rem;
 }
 
-.list {
-	display: flex;
-	flex-direction: column;
-	gap: 1.6rem;
-	list-style: none;
+/* *************************** */
+/* TESTIMONIAL AND GALLERY SECTION */
+/* *************************** */
+
+.section-testimonials {
+	padding: 9.6rem 0;
 }
 
-.list-item {
-	display: flex;
-	align-items: center;
-	font-size: 1.8rem;
-	gap: 1.6rem;
+.testimonials {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 4.8rem;
 }
-.list-icon {
-	width: 3rem;
-	height: 3rem;
-	color: #e67e22;
+
+.testimonial-img {
+	width: 6.4rem;
+	border-radius: 50%;
+	margin-bottom: 1.2rem;
+}
+
+.testimonial-text {
+	font-size: 1.8rem;
+	line-height: 1.8;
+	margin-bottom: 1.6rem;
+}
+
+.testimonial-name {
+	font-size: 1.6rem;
+	color: #777;
 }
