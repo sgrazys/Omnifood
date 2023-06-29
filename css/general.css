@@ -15,6 +15,7 @@ Bold: 700
 Default: 1
 Small: 1.05
 Medius: 1.2
+Large: 1.8
 Paragraph default: 1.6
 
 - Letter spacing
@@ -65,6 +66,7 @@ html {
 	/* 10px / 16px = 0.625 = 62.5% */
 	/* Percentage of user's browser font-size  setting */
 	font-size: 62.5%;
+	overflow-x: hidden;
 }
 
 body,
@@ -79,6 +81,8 @@ body {
 	font-weight: 400;
 	color: #555;
 	line-height: 1;
+	/* Only works if there is nothing absolutely posotioned in relation to body */
+	overflow-x: hidden;
 }
 
 /* *************************** */
@@ -119,9 +123,9 @@ body {
 	grid-template-columns: repeat(4, 1fr);
 }
 
-.grid--5-cols {
+/* .grid--5-cols {
 	grid-template-columns: repeat(5, 1fr);
-}
+} */
 
 .grid--center-v {
 	align-items: center;
@@ -248,6 +252,7 @@ body {
 	align-items: center;
 	font-size: 1.8rem;
 	gap: 1.6rem;
+	line-height: 1.2;
 }
 .list-icon {
 	width: 3rem;
