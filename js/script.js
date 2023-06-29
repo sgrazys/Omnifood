@@ -48,6 +48,7 @@ allLinksDOM.forEach(function (link) {
 // Sticky NAV
 
 const sectionHeroDOM = document.querySelector('.section-hero');
+
 const obs = new IntersectionObserver(
 	function (entries) {
 		const ent = entries[0];
