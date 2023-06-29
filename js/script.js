@@ -14,7 +14,7 @@ btnNavDOM.addEventListener('click', function () {
 });
 
 ///////////////////////////////////////////////////////////
-// Smooth scrolling animation (how to do ot with JS)
+// Smooth scrolling animation (how to do it with JS)
 
 const allLinksDOM = document.querySelectorAll('a:link');
 
@@ -43,6 +43,29 @@ allLinksDOM.forEach(function (link) {
 		}
 	});
 });
+
+///////////////////////////////////////////////////////////
+// Sticky NAV
+
+const sectionHeroDOM = document.querySelector('.section-hero');
+const obs = new IntersectionObserver(
+	function (entries) {
+		const ent = entries[0];
+		console.log(ent);
+		if (!ent.isIntersecting) {
+			document.body.classList.add('sticky');
+		}
+		if (ent.isIntersecting) {
+			document.body.classList.remove('sticky');
+		}
+	},
+	{
+		root: null,
+		threshold: 0,
+		rootMargin: '-80px',
+	}
+);
+obs.observe(sectionHeroDOM);
 
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
