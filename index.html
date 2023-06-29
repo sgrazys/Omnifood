@@ -193,11 +193,22 @@
 					</div>
 
 					<div class="hero-img-box">
-						<img
-							src="./img/hero.png"
-							alt="Healty meals in storage containers, food bowls on a table and woman eating healthy food"
-							class="hero-img"
-						/>
+						<picture>
+							<source
+								srcset="img/hero.webp"
+								type="image/webp"
+							/>
+							<source
+								srcset="img/hero-mini.png"
+								type="image/png"
+							/>
+
+							<img
+								src="./img/hero-mini.png"
+								alt="Healty meals in storage containers, food bowls on a table and woman eating healthy food"
+								class="hero-img"
+							/>
+						</picture>
 					</div>
 				</div>
 			</section>
