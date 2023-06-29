@@ -14,6 +14,7 @@ Web page published at: [https://omnifood-saulius.netlify.app](https://omnifood-s
 -   Media queries
 -   Break points
 -   Animation
+-   Forms
 
 ## 🧰 Getting Started
 
