@@ -1,27 +1,40 @@
+console.log('Hello world!');
+
+const myName = 'Jonas Schmedtmann';
+const h1 = document.querySelector('.heading-primary');
+console.log(myName);
+console.log(h1);
+
+// h1.addEventListener("click", function () {
+//   h1.textContent = myName;
+//   h1.style.backgroundColor = "red";
+//   h1.style.padding = "5rem";
+// });
+
 ///////////////////////////////////////////////////////////
 // Set current year
-const yearDOM = document.querySelector('.year');
+const yearEl = document.querySelector('.year');
 const currentYear = new Date().getFullYear();
-yearDOM.textContent = currentYear;
+yearEl.textContent = currentYear;
 
 ///////////////////////////////////////////////////////////
 // Make mobile navigation work
-const headerDOM = document.querySelector('.header');
-const btnNavDOM = document.querySelector('.btn-mobile-nav');
 
-btnNavDOM.addEventListener('click', function () {
-	headerDOM.classList.toggle('nav-open');
+const btnNavEl = document.querySelector('.btn-mobile-nav');
+const headerEl = document.querySelector('.header');
+
+btnNavEl.addEventListener('click', function () {
+	headerEl.classList.toggle('nav-open');
 });
 
 ///////////////////////////////////////////////////////////
-// Smooth scrolling animation (how to do it with JS)
+// Smooth scrolling animation
 
-const allLinksDOM = document.querySelectorAll('a:link');
+const allLinks = document.querySelectorAll('a:link');
 
-allLinksDOM.forEach(function (link) {
+allLinks.forEach(function (link) {
 	link.addEventListener('click', function (e) {
 		e.preventDefault();
-
 		const href = link.getAttribute('href');
 
 		// Scroll back to top
@@ -31,46 +44,49 @@ allLinksDOM.forEach(function (link) {
 				behavior: 'smooth',
 			});
 
-		// Scroll to section
+		// Scroll to other links
 		if (href !== '#' && href.startsWith('#')) {
-			const elementDOM = document.querySelector(href);
-			elementDOM.scrollIntoView({ behavior: 'smooth' });
+			const sectionEl = document.querySelector(href);
+			sectionEl.scrollIntoView({ behavior: 'smooth' });
 		}
 
-		// Close mobile nav afte the link was clicked
-		if (link.classList.contains('main-nav-link')) {
-			headerDOM.classList.toggle('nav-open');
-		}
+		// Close mobile naviagtion
+		if (link.classList.contains('main-nav-link'))
+			headerEl.classList.toggle('nav-open');
 	});
 });
 
 ///////////////////////////////////////////////////////////
-// Sticky NAV
+// Sticky navigation
 
-const sectionHeroDOM = document.querySelector('.section-hero');
+const sectionHeroEl = document.querySelector('.section-hero');
 
 const obs = new IntersectionObserver(
 	function (entries) {
 		const ent = entries[0];
-		if (!ent.isIntersecting) {
+		console.log(ent);
+
+		if (ent.isIntersecting === false) {
 			document.body.classList.add('sticky');
 		}
-		if (ent.isIntersecting) {
+
+		if (ent.isIntersecting === true) {
 			document.body.classList.remove('sticky');
 		}
 	},
 	{
+		// In the viewport
 		root: null,
 		threshold: 0,
 		rootMargin: '-80px',
 	}
 );
-obs.observe(sectionHeroDOM);
+obs.observe(sectionHeroEl);
 
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
-	const flex = document.createElement('div');
+	var flex = document.createElement('div');
 	flex.style.display = 'flex';
 	flex.style.flexDirection = 'column';
 	flex.style.rowGap = '1px';
@@ -79,7 +95,7 @@ function checkFlexGap() {
 	flex.appendChild(document.createElement('div'));
 
 	document.body.appendChild(flex);
-	const isSupported = flex.scrollHeight === 1;
+	var isSupported = flex.scrollHeight === 1;
 	flex.parentNode.removeChild(flex);
 	console.log(isSupported);
 
