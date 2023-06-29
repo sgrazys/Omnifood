@@ -10,7 +10,10 @@ This is my learning CSS and HTML responsive wep page project. To improve skills 
 
 ## 🎯 Project features/goals
 
--   Responsive design.
+-   Responsive design
+-   Media queries
+-   Break points
+-   Animation
 
 ## 🧰 Getting Started
 
