@@ -6,7 +6,7 @@ This project was made by learning purpose only, following tutorial [Build Respon
 
 This is my learning CSS and HTML responsive wep page project. To improve skills acquired in this course.
 
-<!-- Web page published at: [https://sgrazys.github.io/Bankist-web/](https://sgrazys.github.io/Bankist-web/) -->
+Web page published at: [https://omnifood-saulius.netlify.app](https://omnifood-saulius.netlify.app)
 
 ## 🎯 Project features/goals
 
@@ -19,7 +19,7 @@ This is my learning CSS and HTML responsive wep page project. To improve skills 
 
 ### 💻 Prerequisites
 
-<!-- Node.js - _download and install_
+Node.js - _download and install_
 
 ```
 https://nodejs.org
@@ -32,10 +32,26 @@ https://git-scm.com -->
 
 ```
 
-
 ### 🏃 Run locally
 
-..............................................................................................................
+Would like to run this project locally? Open terminal and follow these steps:
+
+1. Clone the repo
+    ```sh
+    git clone https://github.com/sgrazys/Omnifood.git
+    ```
+2. Install NPM packages
+    ```sh
+    npm i
+    ```
+    or
+    ```sh
+    npm install
+    ```
+3. Run the server
+    ```sh
+    npm run dev
+    ```
 
 ### 🧪 Running tests
 
@@ -52,4 +68,7 @@ Saulius: [Github](https://github.com/sgrazys)
 -   [LinkedIn](https://www.linkedin.com/in/saulius-grazys/)
 
 -   [Mail](mailto:s.grazys@gmail.com)
+
+```
+
 ```
