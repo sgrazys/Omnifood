@@ -1,0 +1,30 @@
+{
+	"name": "omnifood",
+	"version": "1.0.0",
+	"description": "HTML & CSS Learning project. Responsive web design.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "dead-server --host=localhost --port=1410"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/sgrazys/Omnifood.git"
+	},
+	"keywords": [
+		"HTML",
+		"CSS",
+		"JavaScript",
+		"Responsive",
+		"Webpage"
+	],
+	"author": "Saulius Grazys",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/sgrazys/Omnifood/issues"
+	},
+	"homepage": "https://github.com/sgrazys/Omnifood#readme",
+	"devDependencies": {
+		"dead-server": "^1.0.9"
+	}
+}
