@@ -14,6 +14,37 @@ btnNavDOM.addEventListener('click', function () {
 });
 
 ///////////////////////////////////////////////////////////
+// Smooth scrolling animation (how to do ot with JS)
+
+const allLinksDOM = document.querySelectorAll('a:link');
+
+allLinksDOM.forEach(function (link) {
+	link.addEventListener('click', function (e) {
+		e.preventDefault();
+
+		const href = link.getAttribute('href');
+
+		// Scroll back to top
+		if (href === '#')
+			window.scrollTo({
+				top: 0,
+				behavior: 'smooth',
+			});
+
+		// Scroll to section
+		if (href !== '#' && href.startsWith('#')) {
+			const elementDOM = document.querySelector(href);
+			elementDOM.scrollIntoView({ behavior: 'smooth' });
+		}
+
+		// Close mobile nav afte the link was clicked
+		if (link.classList.contains('main-nav-link')) {
+			headerDOM.classList.toggle('nav-open');
+		}
+	});
+});
+
+///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
 	const flex = document.createElement('div');
